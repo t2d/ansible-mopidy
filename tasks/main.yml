@@ -23,3 +23,11 @@
     name: mopidy
     state: started
     enabled: yes
+
+- name: Scan local library daily
+  cron:
+    name: Scan local mopidy library
+    cron_file: mopidy
+    user: mopidy
+    special_time: daily
+    job: mopidy --config /etc/mopidy/mopidy.conf local scan > /dev/null 2>&1
