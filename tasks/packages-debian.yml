@@ -24,5 +24,8 @@
 
 - name: Install gstreamer plugin(s)
   apt:
-    name: gstreamer1.0-plugins-bad
+    name: "{{ item }}"
     state: present
+  with_items:
+    - gstreamer1.0-libav
+    - gstreamer1.0-plugins-bad
