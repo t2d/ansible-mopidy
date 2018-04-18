@@ -1,12 +1,11 @@
-==============
-ansible-mopidy
-==============
+ansible-role-mopidy
+===================
 
 .. image:: http://img.shields.io/badge/ansible--galaxy-mopidy-blue.svg
-  :target: https://galaxy.ansible.com/narfman0/mopidy/
+  :target: https://galaxy.ansible.com/t2d/mopidy/
 
-.. image:: https://travis-ci.org/narfman0/ansible-mopidy.png?branch=master
-    :target: https://travis-ci.org/narfman0/ansible-mopidy
+.. image:: https://travis-ci.org/t2d/ansible-role-mopidy.svg?branch=master
+    :target: https://travis-ci.org/t2d/ansible-role-mopidy
 
 Ansible role that installs Mopidy_ on Ubuntu/Debian. Thanks to
 Daniel White for the inspiration :)
@@ -47,14 +46,14 @@ playbook.yml::
 
     - hosts: mopidy-hosts
       roles:
-        - role: mopidy
+        - { role: t2d.mopidy, tags: mopidy, mopidy-packages: ["mopidy-local-sqlite",] }
 
 Testing
 -------
 
 A vagrant file has been included for easy testing. To get a running mopidy::
 
-    vagrant up --provider virtualbox
+    vagrant up
 
 License
 -------
