@@ -20,15 +20,6 @@
 
 - name: Install mopidy packages
   apt:
-    name: "{{ item }}"
+    name: "{{ mopidy_packages }}"
     state: present
-  with_items: "{{ mopidy_packages }}"
   notify: restart mopidy
-
-- name: Install gstreamer plugin(s)
-  apt:
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - gstreamer1.0-libav
-    - gstreamer1.0-plugins-bad

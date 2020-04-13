@@ -16,6 +16,8 @@ spotify_password: ''
 spotify_enabled: false
 
 mopidy_packages:
+  - gstreamer1.0-libav
+  - gstreamer1.0-plugins-bad
   - mopidy-spotify
 
 mopidy_pip:

@@ -1,13 +1,7 @@
 ---
 
-- name: Update apt cache
+- name: Install apt-transport-https
   apt:
-    update_cache: yes
-  changed_when: False
-
-- name: Install packages
-  apt:
-    name: "{{ item }}"
+    name: apt-transport-https
     state: present
-  with_items:
-    - apt-transport-https
+    update_cache: yes
