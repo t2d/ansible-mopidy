@@ -5,7 +5,7 @@ mopidy_hostname: '0.0.0.0'
 mopidy_media_dir: '/var/lib/mopidy/local'
 pandora_username: narfman0
 pandora_password: ''
-pandora_enabled: false
+pandora_enabled: 'false'
 pandora_api_host: tuner.pandora.com/services/json/
 pandora_key_encrypt: '6#26FRL$ZWD'
 pandora_key_decrypt: 'R=U!LH$O2B#'
@@ -13,7 +13,7 @@ pandora_partner: android-generic
 pandora_partner_password: AC7IBG09A3DTSYM4R41UJWL07VLN8JI7
 spotify_username: narfman0
 spotify_password: ''
-spotify_enabled: false
+spotify_enabled: 'false'
 
 mopidy_dependencies:
   - gpg

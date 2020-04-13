@@ -33,7 +33,6 @@
 
 - name: Install external extensions
   pip:
-    name: "{{ item }}"
+    name: "{{ mopidy_pip }}"
     state: present
-  with_items: "{{ mopidy_pip }}"
   notify: restart mopidy
