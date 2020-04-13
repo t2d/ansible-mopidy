@@ -21,6 +21,11 @@ mopidy_packages:
 mopidy_pip:
   - mopidy-pandora
 
+mopidy_pip_packages:
+  - autoconf
+  - gcc
+  - python-dev
+
 # 'ini_file' module settings for mopidy.conf
 mopidy_settings:
   - { section: 'mpd', option: 'password', value: '{{ mopidy_password }}' }
