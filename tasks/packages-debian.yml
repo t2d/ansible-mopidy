@@ -7,8 +7,11 @@
 
 - name: Ensure mopidy repository is available
   apt_repository:
-    repo: deb http://apt.mopidy.com/ stable main contrib non-free
+    repo: "{{ item }}"
     state: present
+  with_items:
+    - deb https://apt.mopidy.com/ buster main contrib non-free
+    - deb-src https://apt.mopidy.com/ buster main contrib non-free
 
 - name: Ensure mopidy is installed
   apt:
