@@ -13,11 +13,7 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - stretch
-        - jessie
-    - name: Ubuntu
-      versions:
-        - bionic
+        - buster
 
   galaxy_tags:
     - mopidy
