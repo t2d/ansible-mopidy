@@ -1,6 +1,10 @@
 ---
 
-- include: packages.yml
+- name: Install dependencies
+  apt:
+    name: "{{ mopidy_dependencies }}"
+    state: present
+    update_cache: yes
 
 - include: packages-debian.yml
   when: ansible_os_family == 'Debian'
