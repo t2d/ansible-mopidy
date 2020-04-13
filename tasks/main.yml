@@ -6,7 +6,7 @@
   when: ansible_os_family == 'Debian'
 
 - include: pip.yml
-  when: "{{ mopidy_pip }}"
+  when: mopidy_pip|length > 0
 
 - name: Mopidy conf
   ini_file:
